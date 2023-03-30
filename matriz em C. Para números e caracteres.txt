@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <string.h>
+#include <locale.h>
+int i,j;
+int m[3][3]={0};
+char deci[10];
+char x[3][3];
+
+
+int main(){
+	setlocale(LC_ALL,"Portuguese");
+	printf("O que você deseja? Números ou caracteres.\n");
+	printf("resposta: ");
+	scanf("%s", &deci);
+	getchar();
+	if(strcmp(deci,"numeros")==0){
+		for (i=0;i<3;i++){
+			for(j=0;j<3;j++){
+				printf("digite o valor:\n");
+				scanf("%d", &m[i][j]);
+			}
+		}
+		for (i=0;i<3;i++){
+			for(j=0;j<3;j++){
+				printf("%d |", m[i][j]);
+			}
+			printf("\n");
+		}
+	}
+	else if(strcmp(deci,"caracteres")==0){
+			for(i=0;i<3;i++){
+				for(j=0;j<3;j++){
+					printf("digite o valor:\n");
+					scanf("%c", &x[i][j]);
+					getchar();
+				}
+			}
+			for (i=0;i<3;i++){
+				for(j=0;j<3;j++){
+				printf("%c |", x[i][j]);
+			} 
+			printf("\n");
+		}
+	}
+}
+
+
