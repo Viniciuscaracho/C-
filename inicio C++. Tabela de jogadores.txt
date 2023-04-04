@@ -1,0 +1,36 @@
+#include <iostream>
+#include <conio.h>
+#include <Locale.h>
+using namespace std;
+
+
+int main(){
+	setlocale(LC_ALL,"Portuguese");
+	
+	int pont[50], assis[50], reb[50];
+	int njogadores;
+	string nome[50];
+	
+	cout << "Quantos jogadores tem no time?" << endl;
+	cin >> njogadores;
+	
+	for(int i=0;i<njogadores;i++){
+		cout << "Qual o nome do "<< i+1 << "* jogador? ";
+		cin >> nome[i];
+		cout << "Quantos pontos fez? ";
+		cin >> pont[i];
+		cout << "Quantos rebotes? ";
+		cin >> reb[i];
+		cout << "Quantas assistências? ";
+		cin >> assis[i];
+	}
+	system ("cls");
+	
+	for (int j=0;j<njogadores;j++){
+		cout << "Nome:"<< nome[j]<< ". Fez:"<< pont[j] << " pontos, " << reb[j] << " rebotes e "<< assis[j]<< " assistências"<< endl;
+		
+	}
+	cout << endl;
+	
+	return 0;
+}
