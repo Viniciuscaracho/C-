@@ -27,10 +27,8 @@ int main(){
 	system ("cls");
 	
 	for (int j=0;j<njogadores;j++){
-		cout << "Nome:"<< nome[j]<< ". Fez:"<< pont[j] << " pontos, " << reb[j] << " rebotes e "<< assis[j]<< " assistências"<< endl;
+		cout << "Nome:"<< nome[j] << "."<< " fez:"<< pont[j] << " pontos, " << reb[j] << " rebotes e "<< assis[j]<< " assistências"<< endl;
 		
 	}
 	cout << endl;
-	
-	return 0;
 }

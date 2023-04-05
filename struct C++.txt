@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+struct clientes{
+	string nome;
+	int idade;
+	int cliente_id;
+	float sal;
+};
+
+int quant;
+int main(){
+	clientes meu_cliente[10];
+	
+	 cout << "qual a quantidade de clientes?" << endl;
+	 cin >> quant;
+	 
+	for(int i=0; i<quant; i++){
+		cout<< "entre com o Id do cliente " << i+1 << ": ";
+		cin >> meu_cliente[i].cliente_id;
+		cout << "entre com o nome do cliente " << i+1<< ": ";
+		cin >> meu_cliente[i].nome;
+		cout << "entre com a idade do cliente " << i+1 << ": ";
+		cin >> meu_cliente[i].idade;
+		}
+
+	for(int j=0; j<quant; j++){
+		cout << "Id do cliente: " << meu_cliente[j].cliente_id << endl;
+		cout << "nome: " << meu_cliente[j].nome << endl;
+		cout << "idade: " << meu_cliente[j].idade << endl;
+		}
+
+	return 0;
+}
